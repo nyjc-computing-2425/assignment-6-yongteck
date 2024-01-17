@@ -56,4 +56,5 @@ Implement the above algorithm using a `while` loop. Write your code as a functio
 
 # Submission
 
-Before submission, run the tests on your functions.
+Before submitting your code, run the automated tests on your functions. In the shell, type `python test_main.py` and press enter to see the results of the testing.
+

@@ -39,11 +39,19 @@ Implement the above algorithm using a `while` loop. Write your code as a functio
 
 # Part 3: Greatest common factor (GCF)
 
-[Euclid's Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) is an algorithm for calculating the greatest common factor `g` of `a` and `b` such that both `a` and `b` are divisible by `g`:
+[Euclid's Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) is an algorithm for calculating the greatest common factor `GCD` of `a` and `b`
 
-1. Check if `a` and `b` are equal
-2. If they are equal, `a == b == g` (greatest common factor) [EXIT]
-3. If they are not equal, the difference between the two variables, `d`, must also be divisible by `g`: calculate the GCF of the two smallest variables among `a`, `b`, and `d` (Start from Step 1)
+1. Start with two positive integers a and b.
+2. Check if `b` is equal to 0.
+   <br>- If `b` is equal to 0, then a is the `GCD`. Return `a`.
+   <br>- If `b` is not equal to 0, continue to the next step.
+3. Calculate the remainder of `a` divided by `b`.
+   <br>- Let `r` be the remainder of `a` divided by `b`.
+4. Update `a` to be equal to `b`, and update `b` to be equal to `r`.
+   <br>- Set `a` to the value of `b`.
+   <br>- Set `b` to the value of `r`.
+5. Repeat steps 2-4 until `b` becomes 0.
+6. Return the value of a as the `GCD`.
 
 Implement the above algorithm using a `while` loop. Write your code as a function, `gcf(a, b)` that returns the greatest common factor of `a` and `b`.
 
